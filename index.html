@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <div class="floating-decor decor-heart" aria-hidden="true">♡</div>
+    <div class="floating-decor decor-sparkle" aria-hidden="true">✦</div>
+
+    <section class="container" aria-label="Pomodoro timer">
+      <header class="top-section">
+        <img class="mascot" src="cute-cat.svg" alt="Cute sleepy cat mascot">
+        <p class="eyebrow">A LITTLE TIME FOR YOU</p>
+        <h1>Pomodoro <span>♡</span></h1>
+        <p class="subtitle">Small steps, lovely progress.</p>
+
+        <div class="timer-panel">
+          <p id="status" class="status">Focus time</p>
+          <div id="timer" class="timer" role="timer" aria-live="off">25:00</div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-fill"></div>
+          </div>
+          <p id="message" class="message" aria-live="polite">You've got this!</p>
+        </div>
+      </header>
+
+      <section class="settings-section" aria-label="Timer settings">
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-icon session-icon" aria-hidden="true">✿</span>
+            <div>
+              <h2>Focus session</h2>
+              <p>Time to do your thing</p>
+            </div>
+          </div>
+          <div class="stepper">
+            <button class="step-btn" id="sessionMinus" type="button" aria-label="Decrease session time">−</button>
+            <output id="sessionTime" class="minutes">25</output>
+            <button class="step-btn" id="sessionPlus" type="button" aria-label="Increase session time">+</button>
+          </div>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-icon break-icon" aria-hidden="true">☁</span>
+            <div>
+              <h2>Break time</h2>
+              <p>Take a little breather</p>
+            </div>
+          </div>
+          <div class="stepper">
+            <button class="step-btn" id="breakMinus" type="button" aria-label="Decrease break time">−</button>
+            <output id="breakTime" class="minutes">5</output>
+            <button class="step-btn" id="breakPlus" type="button" aria-label="Increase break time">+</button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="startBtn" class="primary-btn" type="button">
+            <span aria-hidden="true">▶</span> Start
+          </button>
+          <button id="resetBtn" class="reset-btn" type="button">
+            <span aria-hidden="true">↻</span> Reset
+          </button>
+        </div>
+        <p class="tiny-note">Focus • Rest • Repeat</p>
+      </section>
+    </section>
+
+    <p class="page-note">Made for your next little win <span>♥</span></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
